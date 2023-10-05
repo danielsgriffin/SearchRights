@@ -1,0 +1,28 @@
+---
+layout: page
+---
+<div id="cardContainer" class="d-block row" role="region" aria-labelledby="cardHeading">
+  <h2 id="cardHeading" >Category: {{ page.category }}</h2>
+  <div class="card col-sm-12 col-md-10 m-2 p-0 border mx-auto" role="article">
+    <div class="card-body p-1">
+      <p class="h6 p-1 m-0">
+        <b id="purposeLabel">Purpose</b>: 
+        <span aria-labelledby="purposeLabel">{{ page.purpose }}</span>
+      </p>
+      <p class="p-1 m-0">
+        <b id="criteriaLabel">Criteria</b>: 
+      </p>
+      <ul class="list-group list-group-flush col-md-6" role="list" aria-labelledby="criteriaLabel">
+        {% for criteria in page.criteria_list %}
+          <li class="list-group-item border">
+            <a href="{{ criteria.url }}" role="listitem">{{ criteria.criteria }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <p class="h6 p-1 m-0">
+        <b id="detailsLabel">Details</b>: 
+        <span aria-labelledby="detailsLabel">{{ page.details | markdownify }}</span>
+      </p>
+    </div>
+  </div>
+</div>

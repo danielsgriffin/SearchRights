@@ -1,0 +1,85 @@
+---
+layout: null
+title: assets/item_index.json
+---
+
+{% assign index_title_only_list = "feed-xml" | split: "," %}
+
+[
+{% for post in site.posts %}
+  {% assign id = post.url | slugify %}
+  {
+    "id": "{{ post.url | slugify }}",
+    "type": "posts",
+    "title": "{{ post.title | xml_escape }}",
+    "author": "{{ post.author | xml_escape }}",
+    "date": "{{ post.date | xml_escape }}",
+    "category": "{{ post.categories | xml_escape | replace: '&quot;', '' }}",
+    "tags": "{{ post.tags | xml_escape | replace: '&quot;', '' }}",
+    "boosts": "{{ post.boosts | xml_escape }}",
+    {% unless index_title_only_list contains post.id or post.index_title_only %}
+    "content": {{ post.content | markdownify | strip_html | replace: '\n', ' ' | jsonify }},
+    {% endunless %}
+    "url": "{{ post.url | xml_escape }}",
+    "snippet": {{ site.data.gpt-summaries[id] | jsonify }}
+  }
+  {% unless forloop.last %},{% endunless %}
+{% endfor %}
+{% if site.posts.size > 0 and site.pages.size > 0 %},{% endif %}
+{% for page in site.pages %}
+  {% if page.lunrjs != 'noindex' and page.layout != 'none' %}
+    {% if forloop.first and site.posts.size > 0 %},{% endif %}
+    {% assign id = page.url | slugify %}
+    {
+      "id": "{{ page.url | slugify }}",
+      "type": 
+        {% if page.url contains 'diss/' %}
+          "diss"
+        {% elsif page.url contains 'shortcuts/' %}
+          "shortcuts"
+        {% elsif page.url contains 'courses/' %}
+          "courses"
+        {% elsif page.url contains 'tags/' %}
+          "tags"
+        {% else %}
+          "pages"
+        {% endif %},
+      "date": "{{ page.date | xml_escape }}",
+      "title": 
+        {% if id == "feed-xml" %}
+          "feed.xml"
+        {% elsif id == "redirects-json" %}
+          "redirects.json"
+        {% else %}
+          "{{ page.title | xml_escape }}"
+        {% endif %},
+      "boosts": "{{ page.boosts | xml_escape }}",
+      "tags": "{{ post.tags | replace: '\"', '' }}",
+      {% unless index_title_only_list contains page.id or page.index_title_only %}
+      "content": {{ page.content | markdownify | strip_html | replace: '\n', ' ' | jsonify }},
+      {% endunless %}
+      "url": "{{ page.url | xml_escape }}",
+      "snippet": {{ site.data.gpt-summaries[id] | jsonify }}
+    }
+    {% unless forloop.last %},{% endunless %}
+  {% endif %}
+{% endfor %}
+{% for external in site.data.external_pages %}
+  {% if forloop.first and site.pages.size > 0 %},{% endif %}
+  {
+    "id": "{{ external.url | slugify }}",
+    "type": "{{ external.type }}",
+    "date": "{{ external.date }}",
+    "title": "{{ external.title }}",
+    "boosts": "{{ external.boosts }}",
+    "tags": "{{ external.tags | replace: '\"', '' }}",
+    "content": {{ external.content | strip_html | strip_newlines | jsonify }},
+    "url": "{{ external.url }}",
+    "snippet": {{ external.snippet | jsonify }}
+  }
+  {% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
+
+
+

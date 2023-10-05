@@ -1,0 +1,112 @@
+category: "Sharing searching"
+category_slug: "sharing-searching"
+purpose: "Support users in sharing their search experience with others."
+details: "Research demonstrates significant value in users communicating about their experiences with tools. Better support for sharing interactions with these systems may improve users collective ability to effectively question/complain, teach, & organize about/around/against these tools (i.e. \"working around platform errors and limitations\" & \"virtual assembly work\" [@burrell2019control], \"repairing searching\" [@griffin2022situating], search quality complaints [@griffin2022search], and end-user audits [@metaxa2021auditing; @lam2022end]) and improve our \"practical knowledge\" of the systems [@cotter2022practical]."
+evaluations:
+  - criteria: "Can you share a link to the results or conversation?"
+    criteria_slug: "can-you-share-a-link-to-the-results-or-conversation"
+    criteria_details: "Is there a share interface? For example, this is supported on OpenAI's ChatGPT and Google's Bard. It is not supported on Anthropic's Claude."
+    criteria_last_update: 2023-09-21 14:03:18 -0700
+    andi:
+      value: "no"
+    metaphor:
+      value: "no"
+    perplexity:
+      value: "yes"
+    phind:
+      value: "yes"
+    you:
+      value: "yes"
+      details: "Requires sign-in."
+  - criteria: "Is there an explanation of how the share interface works provided or linked to in the interface itself?"
+    og_description: "A SearchRights criteria page."
+    criteria_slug: "is-there-an-explanation-of-how-share-interface-works"
+    og_image: "/images/screencapture-SearchRights-criteria-is-there-an-explanation-of-how-share-interface-works-html-2023-09-26-13_35_53-edit.png_resized.png"
+    og_image_alt: "Screenshot of the SearchRights criteria page."
+    criteria_details: "Examples:<br><br>(1) The share interface in OpenAI's ChatGPT has a \"More Info <svg stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"icon-sm\" height=\"1em\" width=\"1em\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\"></path><polyline points=\"15 3 21 3 21 9\"></polyline><line x1=\"10\" y1=\"14\" x2=\"21\" y2=\"3\"></line></svg>\" link to their FAQ page: <a href=\"https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq\">ChatGPT Shared Links FAQ</a>:<br><img class=\"img-fluid img-thumbnail open-modal\" src=\"/images/openaichatgpt-share-interface-2023-09-20-13_45_47.png\" data-toggle=\"modal\" data-target=\"#imageModal\" alt=\"OpenAI's ChatGPT share interface showing a more info link at the bottom.\" role=\"button\" aria-label=\"Click to view a larger image of OpenAI's ChatGPT share interface\" data-caption=\"OpenAI's ChatGPT share interface.\"><br><br>(2) The share interface in Google's Bard has a \"Learn more\" link to a Bard Help page: <a href=\"https://support.google.com/bard/answer/13743730?visit_id=638308387660967799-51908562&amp;p=share_chats&amp;rd=1\">Share your Bard chats</a>: <img class=\"img-fluid img-thumbnail open-modal\" src=\"/images/googlebard-share-interface-2023-09-20-13_34_53.png\" alt=\"Bard share chat interface, showing a learn more link at the bottom.\" data-toggle=\"modal\" data-target=\"#imageModal\" role=\"button\" aria-label=\"Click to view a larger image of Google's Bard share interface\" data-caption=\"Google's Bard share interface.\">"
+    andi:
+      value: "N/A"
+    metaphor:
+      value: "N/A"
+    perplexity:
+      value: "partial"
+      details: "The share link interface consists of the button, with a lock and labelled 'Share', and a popup showing the current 'Secret' state and an option to make 'Shareable:<br><img class=\"img-fluid img-thumbnail open-modal\" src=\"/images/perplexitysharelink_secret_2023-09-20-11_01_50.png\" alt=\"Perplexity AI share link showing the current 'Secret' state and an option to make 'Shareable'.\" data-toggle=\"modal\" data-target=\"#imageModal\" role=\"button\" aria-label=\"Click to view a larger image of Perplexity AI's 'Secret' state\"><br>Clicking 'Shareable' copies the link and presents options to facilitate sharing directly to Twitter, WhatsApp, and Facebook:<br><img class=\"img-fluid img-thumbnail open-modal\" src=\"/images/perplexitysharelink_shareable_2023-09-20-11_07_02.png\" alt=\"Perplexity AI share link showing 'shareable' selected, that it copied link to clipboard, and share options.\" data-toggle=\"modal\" data-target=\"#imageModal\" role=\"button\" aria-label=\"Click to view a larger image of Perplexity AI's 'Shareable' state\">"
+    phind:
+      value: "no"
+      details: "The share link interface consists of the share button icon and a popup:<br><img class=\"img-fluid img-thumbnail open-modal\" src=\"/images/phindsharelink_2023-09-20-10_48_24.png\" alt=\"Phind share link showing only Copy Link and Twitter.\" data-toggle=\"modal\" data-target=\"#imageModal\" role=\"button\" aria-label=\"Click to view a larger image of Phind's share link\">"
+    you:
+      value: "partial"
+      details: "The share link interface consists of the share button icon and a popup which says 'Share YouChat transcript' and 'Anyone with a link will be able to view your full transcript with YouChat in this session.' and presents a link to the search:<br><img class=\"img-fluid img-thumbnail open-modal\" src=\"/images/youchatsharelink_2023-09-20-11_12_21.png\" alt=\"You.com Chat share link showing the text: 'Share YouChat transcript' and 'Anyone with a link will be able to view your full transcript with YouChat in this session.' and a link: 'https://you.com/search?q=who+are+you&tbm=youchat'.\" data-toggle=\"modal\" data-target=\"#imageModal\" role=\"button\" aria-label=\"Click to view a larger image of You.com Chat's share link\">"
+  - criteria: "Do shared links update if the sharee's interaction with the system continues??"
+    criteria_details: "Example: Here is the interaction in ChatGPT, per <a href=\"https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq\">ChatGPT Shared Links FAQ</a>: <blockquote>If I continue the conversation after I create a shared link, will the rest of my conversation appear in the shared link?<br><br>No. Think of a shared link as a snapshot of a conversation up to the point at which you generate the shared link.</blockquote>"
+    andi:
+      value: "N/A"
+    metaphor:
+      value: "N/A"
+      details: "(1) Links to searches reproduce the search from the URL.<br><br>(2) Metaphor does not have follow-on queries/questions."
+    perplexity:
+      value: "sometimes"
+      details: "(1) It is not explicitly stated, but it appears that further interactions by the sharer on the same 'thread' may break the original link (`error=ThreadAccessNotAllowed` appears in the URL, and there is a temporary popup saying the same; try: <a href=\"https://www.perplexity.ai/search/The-demarcation-problem-ssTf727aQ6CvrzBgZES_pQ?s=c\">example</a>):
+        <br><img class=\"img-fluid img-thumbnail open-modal\" src=\"/images/perplexity-cannot-view-this-thread-2023-09-20-13_18_15.png\" alt=\"Text saying: 'Cannot view this thread'.\" data-toggle=\"modal\" data-target=\"#imageModal\" role=\"button\" aria-label=\"Click to view a larger image displaying the text 'Cannot view this thread'\">
+        <br><br>(2) Perplexity has another way to share as well: Collections. A search shared to a collection and then subsequently expanded is updated for the sharee(s)."
+    phind:
+      value: "no"
+      details: "It is not explicitly stated, but it appears that further interactions by the sharer on the same chat are NOT updated at the shared link."
+    you:
+      value: "no"
+      details: "It is not explicitly stated, but it appears that further interactions by the sharer on the same chat are NOT updated at the shared link."
+  - criteria: "Is there a social share card?"
+    criteria_details: "Quality of share cards may influence the engagement on social platforms."
+    criteria_slug: "is-there-a-social-share-card"
+    andi:
+      value: "no"
+    metaphor:
+      value: "yes"
+      details: "Links to searches produce a social share card."
+      screenshots:
+        - "metaphorsharecardF6fEy2PaQAE_-dk"
+    perplexity:
+      value: "yes"
+      details: "Share interface links produce a social share card."
+      screenshots:
+        - "perplexityaisharecardF6AmyQoaEAA4CNY"
+    phind:
+      value: "no"
+      screenshots:
+        - "phindsharecardF6An7-vaQAAZLF6"
+    you:
+      value: "yes"
+      details: "Share interface links produce a social share card."
+      screenshots:
+        - "yousharecardF6AlUnnaoAAld-k"
+  - criteria: "Are share links (or links to searches) indexed and searchable in search engines (or the system itself)?"
+    criteria_details: "Permitting share links to be indexed by search engines may allow searchers elsewhere to find and evaluate the quality of the system responses.
+    Depending on the disclosure in the interface this may pose a privacy risk to users. It may be viewed explicitly as a growth strategy by a search system.<br><br>Evaluation details: I am currently looking only at `site:` searches on Google.<br><br>See a links to conversations about this on Twitter <a href=\"https://twitter.com/danielsgriffin/status/1706748140966363370\">here</a>."
+    criteria_slug: "share-links-indexed-and-searchable"
+    og_image: "/images/screencapture-SearchRights-criteria-share-links-indexed-and-searchable-html-2023-09-27-15_37_30-edit.png_resized.png"
+    og_image_alt: "Screenshot of the SearchRights criteria page."
+    og_description: "A SearchRights criteria page."
+    criteria_last_update: 2023-09-26 16:30:59 -0700
+    andi:
+      value: "N/A"
+    metaphor:
+      value: "yes"
+      details: "You can find links to searches in Google: <a href=\"https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fmetaphor.systems/search\">g[site:https://metaphor.systems/search]</a>.<br><br>Note: There are no 'conversations' on Metaphor.<br><br>Google result count: 6"
+      screenshots:
+        - "metaphor-2023-09-26-16_37_50"
+    perplexity:
+      value: "yes"
+      details: "You can find shared links on Google: <a href=\"https://www.google.com/search?q=site%3Aperplexity.ai%2Fsearch\">g[site:https://www.perplexity.ai/search/]</a><br><br>Many of these searches may be sourced from the links provided on the Perplexity AI <a href=\"https://www.perplexity.ai/discover\">Discover page</a> (which appear to be from Perplexity Bot (accessed via their Discord server). Perplexity Bot is identified as the account for many of the searches found on Google (<a href=\"https://www.perplexity.ai/search/b3dadc99-e264-4792-b174-facba35829a1\">example link here</a>), others are anonymously sourced (<a href=\"https://www.perplexity.ai/search/8142d12c-5f32-4990-a857-de457fc28efa\">example</a>) or <a href=\"https://www.perplexity.ai/search/1d494fbd-5e6a-41bc-b5d5-b1f21d2fe375\">identified</a> <a href=\"https://www.perplexity.ai/search/Invasive-Species-Cost-7lc9AiLAQvSRWeVqNUW7eQ\">accounts</a> (N.b. A few of the results are links I've shared myself: <a href=\"https://www.google.com/search?q=site%3Aperplexity.ai%2Fsearch+danielsgriffin\">g[site:perplexity.ai/search danielsgriffin]</a>.<br><br>Google result count: 3,210"
+      screenshots:
+        - "perplexity-2023-09-26-12_23_00"
+    phind:
+      value: "yes"
+      details: "You can find shared links on Google: <a href=\"https://www.google.com/search?q=site%3Aphind.com%2Fsearch\">g[site:phind.com/search]</a><br><br>Note: Finding <a href=\"https://twitter.com/MichaelRoyzen/status/1616211176924549120\">a Jan 19, 2023 tweet from Phind's CEO</a> is what initiated my review of this criteria.<br><br>Google result count: 6"
+      shortcuts:
+        - "phind-screencapture-google-search-2023-09-28-23_15_50"
+    you:
+      value: "partial"
+      details: "You can find links to searches on Google: <a href=\"https://www.google.com/search?q=site%3Ayou.com%2Fsearch\">g[site:you.com/search]</a><br><br>Google result count: 267<br><br>It does not appear that shared YouChat links are currently searchable on Google. <a href=\"https://twitter.com/vijayabhaskarj/status/1665420553501433858\">@vijayabhaskarj reported finding chat links on Google on Jun 4, 2023</a>."
+      screenshots:
+        - "you-2023-09-26-12_31_00"
+

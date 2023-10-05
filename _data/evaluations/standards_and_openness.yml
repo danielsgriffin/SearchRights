@@ -1,0 +1,34 @@
+category: "Standards & Openness"
+category_slug: "standards-and-openness"
+purpose: "Support interoperability and extensibility."
+details: "This includes checking if a platform supports searching by URL and if it offers an API.<br><br><b>Coming soon</b>: Examine support for the OpenSearch protocol ([mdn](https://developer.mozilla.org/en-US/docs/Web/OpenSearch) | [GitHub](https://github.com/dewitt/opensearch) | [Wikipedia](https://en.wikipedia.org/wiki/OpenSearch)); record comments about open source; record contributions to & integrations from open source."
+evaluations:
+  - criteria: "Can you search by URL?"
+    criteria_details: "Searching by URL has long been a staple approach to searching. This allows people to link to (live) searches (to bookmark or share with others) and to integrate searching within simple scripts. This also supports auditing."
+    andi:
+      value: "no"
+    metaphor:
+      value: "yes"
+      details: "Example: <a href=\"https://metaphor.systems/search?&amp;q=What+is+an+LLM?\">What is an LLM?</a>"
+    perplexity:
+      value: "yes"
+      details: "Example: <a href=\"https://www.perplexity.ai/search/?q=What+is+an+LLM%3F\">What is an LLM?</a>"
+    phind:
+      value: "yes"
+      details: "Example: <a href=\"https://www.phind.com/search?q=What%20is%20an%20LLM%3F\">What is an LLM?</a>"
+    you:
+      value: "yes"
+      details: "Example: <a href=\"https://you.com/search?q=What+is+an+LLM%3F&tbm=youchat\">What is an LLM?</a>"
+  - criteria: "Is there an API?"
+    criteria_details: "Searching by API may better support evaluations of the search results and the development of modifications or extensions building on or with the search system."
+    andi:
+      value: "no"
+    metaphor:
+      value: "yes"
+    perplexity:
+      value: "no"
+    phind:
+      value: "no"
+    you:
+      value: "no"
+      details: "<blockquote class=\"text-smaller\">You.com does not offer an API for search or chat at this time. However, we are considering creating one in the future. If you would like to be notified when this happens, fill out the form <a href=\"https://about.you.com/api/\">here</a>.</blockquote> <a href=\"https://about.you.com/hc/getting-started/does-you-com-offer-an-api/\">source</a>"

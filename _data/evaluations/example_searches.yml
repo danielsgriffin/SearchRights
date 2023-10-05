@@ -1,0 +1,99 @@
+category: "Example searches"
+category_slug: "example-searches"
+purpose: "Help users practice new ways of imagining and formulating queries."
+details: "Research suggests that effective prompting of LLMs can be challenging [@zamfirescu-pereira2023johnny] and query formulation even in mainstream web search engines is complicated [@tripodi2018searching]. @mollick2023useful, not specifically re search systems, has called for <a href=\"/excerpts/2023/09/08/large-scale-public-libraries-of-prompts.html\">\"large-scale public libraries of prompts\"</a>."
+evaluations:
+  - criteria: "Are there default example searches?"
+    criteria_details: "Comment: It may be interesting to also consider whether these queries demonstrate an advantage of the generative search capabilities or not."
+    criteria_slug: "are-there-default-example-searches"
+    andi:
+      value: "yes"
+      details: "Ex.<ul>
+        <li>[history of the birkin bag]</li>
+        <li>[What is the Mandalorian?]</li>
+        <li>[write a review of the best michelin star chefs in the world]</li>
+        <li>Go to apps, eg [go aws console]</li>
+        </ul>"
+      comment: "Note that these are not links to searches because search-by-URL is not available in Andi."
+      screenshots:
+        - "screencapture-andisearch-2023-09-13-15_02_24"
+        - "screencapture-andisearch-2023-09-20-09_57_19"
+    metaphor:
+      value: "yes"
+      details: "Ex.<ul>
+        <li>[<a href=\"https://metaphor.systems/search?&q=companies+working+on+fusion\">companies working on fusion</a>]</li>
+        <li>[<a href=\"https://metaphor.systems/search?&q=blog+posts+to+learn+how+LLMs+work\">blog posts to learn how LLMs work</a>]</li>
+        <li>[<a href=\"https://metaphor.systems/search?&q=best+restaurants+in+San+Francisco\">best restaurants in San Francisco</a>]</li>
+        <li>[<a href=\"https://metaphor.systems/search?&q=fun+concerts+in+San+Francisco\">fun concerts in San Francisco</a>]</li>
+        </ul>"
+      screenshots:
+        - "screencapture-metaphor-systems-2023-09-20-09_57_55"
+    perplexity:
+      value: "yes"
+      details: "Clicking in the searchbox. Ex.<ul>
+        <li>[<a href=\"https://perplexity.ai/search/?q=Morocco+earthquake+2023\">Morocco earthquake 2023</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=how+do+bacteriophages+differ+from+antibiotics\">how do bacteriophages differ from antibiotics</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=what+causes+the+Northern+Lights\">what causes the Northern Lights</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=super+blue+moon\">super blue moon</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=difference+between+stop+motion+and+claymation\">difference between stop motion and claymation</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=future+of+artificial+selection\">future of artificial selection</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=miracle+berries\">miracle berries</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=how+do+reading+skills+change+human+brain\">how do reading skills change human brain</a>]</li>
+        </ul><br><br>In the mobile app. Listed as 'Popular', ex.<ul>
+        <li>[<a href=\"https://perplexity.ai/search/?q=examples+of+preventive+medicine+practices\">examples of preventive medicine practices</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=what+are+the+most+popular+podcast+categories\">what are the most popular podcast categories</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=breathtaking+adventure+books+about+Africa\">breathtaking adventure books about Africa</a>]</li>
+        <li>[<a href=\"https://perplexity.ai/search/?q=how+does+skiplagging+work\">how does skiplagging work</a>]</li>
+        </ul>"
+      screenshots:
+        - "Screen Shot-perplexity-ai2023-09-20 at 10.02.42 AM"
+    phind:
+      value: "yes"
+      details: "Listed as 'Explore', ex.<ul>
+        <li>[<a href=\"https://phind.com/search?q=Why+we+shouldn't+use+useMemo()+in+React+everywhere\">Why we shouldn't use useMemo() in React everywhere</a>]</li>
+        <li>[<a href=\"https://phind.com/search?q=The+2005+Japanese+PS2+videogame+Ikusagami+renders+thousands+of+enemies+on+screen.+How+can+I+achieve+this+in+Godot+4?\">The 2005 Japanese PS2 videogame Ikusagami renders thousands of enemies on screen. How can I achieve this in Godot 4?</a>]</li>
+        <li>[<a href=\"https://phind.com/search?q=Why+are+there+so+many+potholes+in+SF+and+can+I+get+money+if+my+car+is+broken+by+one\">Why are there so many potholes in SF and can I get money if my car is broken by one</a>]</li>
+        <li>[<a href=\"https://phind.com/search?q=How+do+I+conditionally+import+components+in+Astro?\">How do I conditionally import components in Astro?</a>]</li>
+        <li>[<a href=\"https://phind.com/search?q=Compare+and+contrast+H100+availability+across+Lambda+Labs+and+AWS\">Compare and contrast H100 availability across Lambda Labs and AWS</a>]</li>
+        </ul>"
+      screenshots:
+        - "screencapture-phind-2023-09-20-10_10_11"
+    you:
+      value: "yes"
+      details: "Ex.<ul>
+        <li>[<a href=\"https://you.com/search?q=Check+today's+weather&tbm=youchat\">Check today's weather</a>]</li>
+        <li>[<a href=\"https://you.com/search?q=Find+cost-effective+vacations&tbm=youchat\">Find cost-effective vacations</a>]</li>
+        <li>[<a href=\"https://you.com/search?q=Shop+for+running+shoes&tbm=youchat\">Shop for running shoes</a>]</li>
+        </ul>"
+      screenshots:
+        - "screencapture-you-2023-09-20-09_59_55-edit"
+  - criteria: "Do default example searches have contextually relevant explanation on sourcing?"
+    criteria_slug: "do-example-searches-have-cre"
+    andi:
+      value: "no"
+    metaphor:
+      value: "no"
+    perplexity:
+      value: "partial"
+      details: "On mobile app there are example searches listed above the search bar, explained only by the word 'Popular'"
+    phind:
+      value: "no"
+    you:
+      value: "no"
+  - criteria: "Is there a \"searchable repository of examples\"?"
+    criteria_details: "The phrase <a href=\"/excerpts/2023/09/08/a-searchable-repository-of-examples.html\">\"searchable repository of examples\"</a> comes from Zamfirescu-Pereira et al., 2023. They point to a \"prompt book\" for DALL·E. Other examples, also in the image generation domain, include <a href=\"https://lexica.art/\">Lexica</a> (marketing itself as \"The Stable Diffusion search engine\"). See also <a href=\"/docs/2023/09/08/the-langchain-hub.html\">the searchable LangChain Hub prompt repository for developers</a>."
+    criteria_slug: "searchable-repository-of-examples"
+    andi:
+      value: "no"
+    metaphor:
+      value: "partial"
+      details: "`# show-and-tell` channel in the Discord channel: 'Show off what you've found with Metaphor!'"
+    perplexity:
+      value: "partial"
+      details: "**(1)** `# 💗 | sharing` channel in the Discord channel: 'Share cool results that you got with Perplexity! Please keep everything safe and friendly.'<br><br>**(2)** `# 🔎 │ ask` channel in the Discord channel: 'ask \\@perplexity anything. Check pinned for usage.' (with a weekly challenge for the best question; pinned message show example queries (note these are queries of their Discord bot))<br><br>**(3)** A [Discover](https://www.perplexity.ai/discover) page shares 30 example queries."
+    phind:
+      value: "partial"
+      details: "`# 🤯impressive-results` channel in the Discord channel"
+    you:
+      value: "no"
+      details: "`# create-and-share` channel in the Discord channel appears focused on image generation rather than searching with You.com All or YouChat."

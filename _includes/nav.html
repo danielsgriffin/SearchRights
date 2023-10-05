@@ -1,0 +1,195 @@
+<div class="bg-light border-bottom d-flex justify-content-center mb-1">
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
+<a class="navbar-brand pl-2" href="/">SearchRights</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item px-2">
+<a class="nav-link {% if page.path contains 'about' %}active{% endif %}" href="/about">About </a>
+</li>
+<li class="nav-item px-2">
+<a class="nav-link {% if page.path contains 'table' %}active{% endif %}" href="/table">Table </a>
+</li>
+<li class="nav-item px-2">
+<a class="nav-link {% if page.path contains 'log' %}active{% endif %}" href="/log">Log </a>
+</li>
+<li class="nav-item dropdown pl-2">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+Criteria
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+{% for file in site.data.evaluations %}
+{% assign evaluation_file = file[1] %} <!-- This gets the content of the YAML file -->
+<a class="dropdown-item" href="/categories/{{ evaluation_file.category_slug }}">
+<b>{{ evaluation_file.category }}</b> </a>
+{% for criteria in evaluation_file.evaluations %}
+<a class="dropdown-item" href="{{ criteria.url }}">
+{{ criteria.criteria }} </a>
+{% endfor %}
+{% unless forloop.last %}
+<div class="dropdown-divider"></div>
+{% endunless %}
+{% endfor %}
+</div>
+</li>
+<li class="nav-item dropdown pl-2">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+Search Systems
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+{% for system in site.data.systems %}
+<a class="dropdown-item"><a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="/systems/{{ system.slug }}.html">{% include_cached svg-clipboard-icon.html %}{{ system.name }}</a></a>
+{% endfor %}
+</div>
+</li>
+</ul>
+<!-- <form class="form-inline my-1 ml-5 my-lg-0"> -->
+  <!-- search w/ FlexSearch -->
+  <!-- <input id="search-input" class="form-control p-0 m-0 mr-sm-1 pl-1" style="width: 200px; height: 30px;" type="search" placeholder="Search SearchRights..." aria-label="Search"> -->
+<!-- </form> -->
+</div>
+</nav>
+</div>
+<!-- <div id="search-results" class="text-left flexsearch-dropdown-menu"></div> -->
+
+<style>
+#search-input {
+padding: 10px;
+width: 300px;
+border: 1px solid #ddd;
+}
+
+#search-results a {
+display: block;
+padding: 5px;
+text-decoration: none;
+color: #333;
+}
+
+#search-results a:hover {
+background-color: #f5f5f5;
+}
+
+</style>
+
+
+<!-- <script src="/js/vendor/flexsearch.bundle.js"></script> -->
+<!-- <script src="/js/search/flexsearch_implementation_SearchRights.js"></script> -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+});
+
+</script>
+<script>
+  var posts = [
+    {% for post in site.posts %}
+      {
+        "id": "{{ post.url | slugify }}",
+        "type": "posts",
+        "title": "{{ post.title | xml_escape }}",
+        "author": "{{ post.author | xml_escape }}",
+        "date": "{{ post.date | xml_escape }}",
+        "category": "{{ post.category | xml_escape }}",
+        "tags": "{{ post.tags | xml_escape | replace: '&quot;', '' }}",
+        "content": {{ post.content | strip_html | jsonify }},
+        "snippet": {{ post.snippet | markdownify | jsonify }},
+        "url": "{{ post.url | xml_escape }}",
+        "snippet_image": "{{ post.snippet_image | xml_escape }}",
+        "snippet_image_alt": "{{ post.snippet_image_alt | xml_escape }}",
+        "snippet_image_class": "{{ post.snippet_image_class | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+{% comment %}
+This block of code generates an array of pages (excluding the ones with layout == "none" 
+and those with lunr.js set to "noindex" (i.e. "lunrjs: noindex") in the front matter) to be indexed by lunr.js. 
+{% endcomment %}
+
+{% assign diss_url = "diss/" %}
+{% assign shortcuts_url = "shortcuts/" %}
+{% assign courses_url = "courses/" %}
+
+var pages = [
+  {% for page in site.pages %}
+    {% comment %} Skip the page if it's marked with 'noindex' or if its layout is set to 'none' {% endcomment %}
+    {% if page.lunrjs != 'noindex' and page.layout != 'none' %}
+    {
+      "id": "{{ page.url | slugify }}",
+      
+      {% comment %}
+      Set the type according to the URL.
+      Pages under "/diss/" will be marked as 'diss', 
+      and those under "/shortcuts/" will be marked as 'shortcuts'.
+      {% endcomment %}
+      "type": 
+        {% if page.url contains diss_url %}
+          "diss"
+        {% elsif page.url contains shortcuts_url %}
+          "shortcuts"
+        {% elsif page.url contains courses_url %}
+          "courses"
+        {% else %}
+          "pages"
+        {% endif %},
+
+      "date": "{{ page.date | xml_escape }}",
+      "title": 
+        {% if page.url == "/feed.xml" %}
+          "feed.xml"
+        {% elsif page.url == "/redirects.json" %}
+          "redirects.json"
+        {% else %}
+          "{{ page.title | xml_escape }}"
+        {% endif %},
+      "tags": "{{ page.tags | xml_escape | replace: '&quot;', '' }}",
+      "content": {{ page.content | strip_html | jsonify }},
+      "snippet": {{ page.snippet | markdownify | jsonify }},
+      "url": "{{ page.url | xml_escape }}",
+      "snippet_image": "{{ page.snippet_image | xml_escape }}",
+      "snippet_image_alt": "{{ page.snippet_image_alt | xml_escape }}",
+      "snippet_image_class": "{{ page.snippet_image_class | xml_escape }}"
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+];
+
+var externals = [
+  {% for external in site.data.external_pages %}
+    {
+      "id": "{{ external.url | slugify }}",
+      "type": "{{ external.type }}",
+      "date": "{{ external.date | xml_escape }}",
+      "title": "{{ external.title }}",
+      "tags": "{{ external.tags | xml_escape | replace: '&quot;', '' }}",
+      "content": {{ external.content | strip_html | jsonify }},
+      "snippet": {{ external.snippet | markdownify | jsonify }},
+      "url": "{{ external.url | xml_escape }}",
+      "snippet_image": "{{ external.snippet_image | xml_escape }}",
+      "snippet_image_alt": "{{ external.snippet_image_alt | xml_escape }}",
+      "snippet_image_class": "{{ external.snippet_image_class | xml_escape }}"
+    }
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+
+
+  window.store = [...posts, ...pages, ...externals];
+
+
+
+</script>
+
+
+

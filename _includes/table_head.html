@@ -1,0 +1,25 @@
+{% if include.is_criteria_page %}
+{% assign display_class = ' d-none' %}
+{% else %}
+{% assign display_class = '' %}
+{% endif %}
+
+<div id="tableContainer" class="table-responsive-sm m-1 col-12 mx-auto {{ display_class }}">
+  <!-- Display message for smaller screens -->
+  <div class="rotate-message alert alert-warning mx-auto">
+    <p class="h6">This table is optimized for larger screens. Rotate your device to landscape mode for the best experience.</p>
+  </div>
+
+  <table class="table table-bordered table-hover col-12 mx-1 mb-3">
+    {% unless include.system_page %}
+      <thead>
+        <tr class="text-center">
+          <th scope="col"></th>
+          {% for system in include.systems %}
+            <th scope="col">
+              <a class="icon-link icon-link-hover text-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="/systems/{{ system.slug }}.html">{% include_cached svg-clipboard-icon.html %}{{ system.name }}</a> <a target="_blank" href="{{ system.url }}" aria-label="External link to {{ system.name }}" class="icon-container">{% include_cached svg-external-link-icon.html %}</a>
+            </th>
+          {% endfor %}
+        </tr>
+      </thead>
+    {% endunless %}

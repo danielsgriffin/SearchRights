@@ -1,0 +1,30 @@
+- id: "andi"
+  slug: "andi-search"
+  name: "Andi Search"
+  url: "https://andisearch.com/"
+  url_params: null
+
+- id: "metaphor"
+  slug: "metaphor-systems"
+  name: "Metaphor"
+  url: "https://metaphor.systems/"
+  url_params: "search?&q=%s"
+
+- id: "perplexity"
+  slug: "perplexity-ai"
+  name: "Perplexity AI"
+  url: "https://perplexity.ai/"
+  url_params: "search/?q=%s"
+
+
+- id: "phind"
+  slug: "phind-search"
+  name: "Phind"
+  url: "https://phind.com/"
+  url_params: "search?q=%s"
+
+- id: "you"
+  slug: "you-search"
+  name: "You.com"
+  url: "https://you.com/"
+  url_params: "search?q=%s"

@@ -1,0 +1,13 @@
+<tr class="m-0 p-0">
+<th scope="row" colspan="{{ include.colspan_size }}" class="m-0 p-2">
+<p class="h5 m-0 p-0">{{ include.evaluation_file.category }}
+<a href="/categories/{{ include.evaluation_file.category_slug }}">{% include_cached svg-link-icon.html %}</a>
+</p>
+<p class="pb-0 pt-1 mb-0 font-weight-normal">{{ include.evaluation_file.purpose }}</p>
+{% if include.system_page %}
+<span class="pb-0 pt-1 mb-0 font-weight-normal">{{ include.evaluation_file.details | markdownify }}</span>
+{% else %}
+<p class="pb-0 pt-1 mb-0 font-weight-normal">{{ include.evaluation_file.details }}</p>
+{% endif %}
+</th>
+</tr>

@@ -1,0 +1,80 @@
+---
+layout: page
+---
+{% assign colspan_size = 2 %}
+<h1 class="pb-0 mb-0">{{ page.system.name }}</h1>
+<span class="small pt-0 mt-0"><a class="pt-0 mt-0" href="{{ page.system.url }}">{{ page.system.url }}</a></span>
+
+
+<h3>Individual marks:</h3>
+
+{% include_cached table_head.html system_page=true system=page.system %}
+<tbody>
+{% for file in site.data.evaluations %}
+{% assign evaluation_file = file[1] %} <!-- This gets the content of the YAML file -->
+{% include_cached category_row.html system_page=true evaluation_file=evaluation_file colspan_size=colspan_size %}
+{% for criteria in evaluation_file.evaluations %}
+<!-- Criteria rows -->
+{% include_cached criteria_row.html criteria=criteria system_page=true system=page.system use_url=true %}
+{% endfor %}
+
+{% endfor %}
+</tbody>
+</table>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  let tableButton = document.getElementById("tableView");
+  let cardButton = document.getElementById("cardView");
+  
+  let tableContainer = document.getElementById("tableContainer");
+  let cardContainer = document.getElementById("cardContainer");
+
+  tableButton.addEventListener("click", function() {
+    tableButton.classList.add('active');
+    cardButton.classList.remove('active');
+    
+    // Show table view and hide card view
+    tableContainer.classList.add('d-block');
+    tableContainer.classList.remove('d-none');
+    
+    cardContainer.classList.add('d-none');
+    cardContainer.classList.remove('d-block');
+  });
+
+  cardButton.addEventListener("click", function() {
+    cardButton.classList.add('active');
+    tableButton.classList.remove('active');
+    
+    // Show card view and hide table view
+    cardContainer.classList.add('d-block');
+    cardContainer.classList.remove('d-none');
+    
+    tableContainer.classList.add('d-none');
+    tableContainer.classList.remove('d-block');
+  });
+});
+
+document.getElementById('toggleCommentLink').addEventListener('click', function(event) {
+    // Prevent the default behavior of the link
+    event.preventDefault();
+
+    var chatText = document.getElementById('chat-text');
+    var chatTextFill = document.getElementById('chat-text-fill');
+    var comment = document.getElementById('additionalComment');
+
+    if (comment.classList.contains('d-none')) {
+        comment.classList.remove('d-none');
+        comment.classList.add('d-block');
+        chatText.classList.add('d-none');
+        chatTextFill.classList.remove('d-none');
+    } else {
+        comment.classList.add('d-none');
+        comment.classList.remove('d-block');
+        chatText.classList.remove('d-none');
+        chatTextFill.classList.add('d-none');
+    }
+});
+
+</script>

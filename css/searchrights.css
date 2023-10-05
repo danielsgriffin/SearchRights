@@ -1,0 +1,149 @@
+@font-face {
+ font-family: 'Inter var';
+ src: url('/assets/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+body {
+ font-family: 'Inter var', sans-serif;
+ /* Adjust this to change the weight */
+ font-weight: 400;
+ /* Adjust this to change the slant */
+ font-style: oblique 1deg;
+}
+
+
+.text-smaller {
+    font-size: 0.9em;
+}
+
+table {
+table-layout: fixed;
+
+}
+
+th, td {
+  overflow: scroll;
+}
+
+td {
+position: relative;
+}
+
+.svg-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;  /* or your SVG size */
+    height: 16px; /* or your SVG size */
+}
+
+/* Style for "Yes" cells */
+.yes {
+    background-color: #44AA99; /* Green/Blue color for "Yes" */
+    background-color: rgba(68,170,153, 0.1);
+}
+
+/* Style for "N/A" cells */
+.shaded {
+    background-color: #CC6677; /* Red color for "No" */
+    background-color: rgba(204,112,119, 0.1);
+}
+
+.shaded {
+    background-color: lightgray;
+}
+
+/* Style for "No" cells */
+.no {
+    background-color: #CC6677; /* Red color for "No" */
+    background-color: rgba(204,112,119, 0.1);
+}
+
+/* Style for "Partial" cells */
+.partial, .sometimes {
+    background-color: #DDCC77; /* Yellow color for "Partial" */
+    background-color: rgba(221, 204, 119, 0.1);
+}
+
+.detail a {
+    font-size: 0.9em;
+}
+
+.detail li {
+    font-size: 0.9em;
+}
+
+
+
+.btn.active {
+    background-color: #007BFF;  /* Blue color for active button */
+    color: white;
+}
+
+
+#additionalComment {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/* By default, the message is hidden */
+.rotate-message {
+  display: none;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for small screens) */
+@media (max-width: 768px) {
+  /* Styles for small screens */
+  table {
+    /* Add styles to make the message stand out or adjust table layout for small screens */
+  }
+
+  /* On small screens, make the message visible */
+  .rotate-message {
+    display: block; /* make it visible */
+  }
+}
+
+
+.open-modal {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.custom-link {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+
+a.nav-link.active {
+  color: black !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}
+
+
+.flexsearch-relative-container {
+  position: relative;
+}
+
+.flexsearch-absolute-dropdown {
+  position: absolute;
+  top: 100%;  /* Position it at the bottom of the navbar-container */
+  right: 0;   /* Align it to the left */
+  z-index: 1000; /* Make it appear above other content */
+  /* Add other styles like background-color, width, etc. */
+}
+
+
+.icon-container {
+  display: inline-block;
+  position: relative;
+}
+
+.shifted-svg {
+  position: relative;
+  top: -5px; /* Adjust this value to shift the SVG up as required */
+}

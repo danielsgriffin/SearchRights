@@ -1,0 +1,48 @@
+{% assign use_criteria = include.criteria %}
+{% assign use_url = include.use_url %}
+<tr>
+<th scope="row">
+<div class="d-flex justify-content-between">
+<span>{{ use_criteria.criteria }}</span>
+<span>{% if use_url %}
+<a href="{{ use_criteria.url }}">{% include_cached svg-link-icon.html %}</a>
+{% endif %}</span></div>
+{% if use_criteria.criteria_details %}
+<hr>
+<span class="text-smaller font-weight-normal">{{ use_criteria.criteria_details }}</span>
+{% endif %}
+</th>
+{% if include.system_page %}
+{% assign system = include.system %}
+{% assign criteria_value = use_criteria[system.id].value %}
+
+{% if criteria_value == 'N/A' %}
+    {% assign cell_class = 'shaded' %}
+{% else %}
+    {% assign cell_class = criteria_value %}
+{% endif %}
+
+
+{% if criteria_value == 'N/A' %}
+    {% assign display_value = criteria_value %}
+{% else %}
+    {% assign display_value = criteria_value | capitalize %}
+{% endif %}
+
+<td class="{{ cell_class }}">
+<div class="d-flex justify-content-between">
+<span>{{ display_value }}</span>
+<span>{% if use_criteria[system.id].screenshots %}{% for screenshot in use_criteria[system.id].screenshots %}<a class="p-0 m-0" title="Screenshot" href="/images/{{ screenshot }}.png">{% include_cached svg-image-icon.html %}</a>{% endfor %}{% endif %}</span></div>
+{% if use_criteria[system.id].details %}
+<div class="detail">
+<hr>
+<p class="text-smaller">{{ use_criteria[system.id].details | newline_to_br }}{% if use_criteria[system.id].comment %}{% assign comment = use_criteria[system.id].comment %}<a href="#" id="toggleCommentLink">{% include_cached svg-both-chat-text-icons.html %}</a><div id="additionalComment" class="d-none">{{ comment }}</div>{% endif %}</p></div>{% endif %}</td>{% else %}{% for system in site.data.systems %}<!-- problem was here-->{% if use_criteria[system.id].value == 'N/A' %}<td class="shaded">{% else %}<td class="{{ use_criteria[system.id].value }}">{% endif %}<div class="d-flex justify-content-between"><span>{% if use_criteria[system.id].value == 'N/A' %}{{ use_criteria[system.id].value }}{% else %}{{ use_criteria[system.id].value | capitalize }}{% endif%}</span><span>{% if use_criteria[system.id].screenshots %}{% for screenshot in use_criteria[system.id].screenshots %}<a class="p-0 m-0" title="Screenshot" href="/images/{{ screenshot }}.png"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-file-image" viewBox="0 0 16 16"><path d="M8.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/><path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8l-2.083-2.083a.5.5 0 0 0-.76.063L8 11 5.835 9.7a.5.5 0 0 0-.611.076L3 12V2z"/></svg></a>{% endfor %}{% endif %}</span></div>
+{% if use_criteria[system.id].details %}
+<div class="detail">
+<hr>
+<p class="text-smaller">{{ use_criteria[system.id].details | newline_to_br }}{% if use_criteria[system.id].comment %}{% assign comment = use_criteria[system.id].comment %}<a href="#" id="toggleCommentLink">{% include_cached svg-both-chat-text-icons.html %}</a><div id="additionalComment" class="d-none">{{ comment }}</div>{% endif %}</p></div>
+{% endif %}
+</td>
+{% endfor %}
+{% endif %}
+</tr>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us" encoding="UTF-8">
+<!--This personal webpage makes use of the jekyll software for static websites.-->
+
+<head>
+   <title>{{ page.title }}</title>
+   <meta name="author" content="Daniel S. Griffin" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+   <style type="text/css">{% include_cached critical.css %}</style>
+
+   <link rel="stylesheet" href="/css/vendor/bootstrap.min.css" defer/>   
+   <!-- main CSS -->
+   <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" defer/>
+   <link rel="stylesheet" href="/css/searchrights.css" type="text/css" media="screen" defer/>
+   
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/syntax.css" type="text/css" defer />
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+   {% if jekyll.environment == 'production' %}
+   {% include analytics.html %}
+   {% endif %}
+   {% include social-metatags.html %}
+</head>
