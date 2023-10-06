@@ -80,6 +80,3 @@ title: assets/item_index.json
   {% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
-
-
-

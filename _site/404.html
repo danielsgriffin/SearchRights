@@ -20,6 +20,9 @@
    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
    
+   <!-- analytics -->
+<script defer data-domain="searchrights.org" src="https://plausible.io/js/script.js"></script>
+   
    <!-- Update your html tag to include the itemscope and itemtype attributes. -->
 <html itemscope itemtype="http://schema.org/Article">
 
@@ -48,7 +51,7 @@
 <meta itemprop="name" content="SearchRights.org" />
 <meta itemprop="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
 
-  <meta itemprop="image" content="http://localhost:4001" />
+  <meta itemprop="image" content="https://SearchRights.org" />
 
 
 <!-- Twitter Card data -->
@@ -72,18 +75,18 @@
 
 <!-- Twitter summary card with large image must be at least 280x150px -->
 
-  <meta name="twitter:image:src" content="http://localhost:4001" />
-  <meta name="twitter:image" content="http://localhost:4001" />
+  <meta name="twitter:image:src" content="https://SearchRights.org" />
+  <meta name="twitter:image" content="https://SearchRights.org" />
   <meta name="twitter:image:alt" content="Portrait." />
 
-<meta name="twitter:url" content="http://localhost:4001/404.html" />
+<meta name="twitter:url" content="https://SearchRights.org/404.html" />
 
 <!-- Open Graph data -->
 <meta property="og:title" content="SearchRights.org" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4001/404.html" />
+<meta property="og:url" content="https://SearchRights.org/404.html" />
 
-  <meta property="og:image" content="http://localhost:4001" />
+  <meta property="og:image" content="https://SearchRights.org" />
 
 <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
 <meta property="og:site_name" content="SearchRights.org" />
@@ -115,7 +118,13 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">    
-<div class="bg-light border-bottom d-flex justify-content-center mb-1">
+<div class="bg-dark text-light justify-content-center mb-0 w-100">
+<div class="mx-auto text-center justify-content-center w-75">
+<small class="notice m-0 p-0 pt-1">🚧 This prototype is actively under construction. 🚧</small>
+<small style="line-height: 0; display: block;">&nbsp;</small>
+<small>Please provide feedback at <a href="https://github.com/danielsgriffin/SearchRights/issues" class="text-light">github/danielsgriffin/SearchRights/issues</a> or via email to <a href="mailto:daniel.griffin@berkeley.edu?subject=[SearchRights.org]" class="text-light">daniel.griffin@berkeley.edu</a>.</small>
+</div></div>
+<div class="bg-light border-bottom border-top d-flex justify-content-center mb-1">
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
 <a class="navbar-brand pl-2" href="/">SearchRights</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -354,7 +363,7 @@ var pages = [
           "SearchRights"
         ,
       "tags": "",
-      "content": "\n\n\n\n\n\nSearchRights\n\n\nWelcome to SearchRights.org, a platform dedicated to evaluation, and promotion of search systems that focus on including the user. We critically evaluate search systems based on a robust, user-centric framework. We examine how search systems (from engines and agents to frameworks and tools) support searcher rights to:\n\nCompare: Explore and develop practical knowledge of various search systems for informed decisions.\nComplain &amp; Contest: Challenge systems when they fall short of user needs or expectations.\nRepair: Modify or fix search systems without facing unwarranted obstructions.\nShare: Involve others in searches, teach others about searching, and assemble to improve search.\nExtend: Adapt systems and practices.\nChoose: Freely select the search tools that resonate with individual needs, values, and aspirations.\nLearn: Cultivate curiosity and questions, address ignorance, and search even outside of clear tasks or goals.\n\nOur framework emphasizes:\n\n\nComparative Evaluations: Through rigorous and interdisciplinary methodologies, we provide clear comparisons of how various search systems support or challenge the searcher.\n\n\nDiversity: Our vision embraces the multitude of ways people search, promoting a landscape where different methodologies coexist and evolve.\n\n\nOur commitment at SearchRights.org is clear: to move beyond the status quo and ensure the search landscape prioritizes and truly includes its users.\n\n\n  About\n  See the Table\n  See the Log\n",
+      "content": "\n\n\n\n\n\n\n\nWelcome to SearchRights.org, a platform dedicated to the evaluation and promotion of search systems that focus on including the user. We critically evaluate search systems based on a robust, user-centric framework. We examine how search systems (from engines and agents to frameworks and tools) support searcher rights to:\n\nCompare: Explore and develop practical knowledge of various search systems for informed decisions.\nComplain &amp; Contest: Challenge systems when they fall short of user needs or expectations.\nRepair: Modify or fix search systems without facing unwarranted obstructions.\nShare: Involve others in searches, teach others about searching, and assemble to improve search.\nExtend: Adapt systems and practices.\nChoose: Freely select the search tools that resonate with individual needs, values, and aspirations.\nLearn: Cultivate curiosity and questions, address ignorance, and search even outside of clear tasks or goals.\n\nOur framework emphasizes:\n\n\nComparative Evaluations: Through rigorous and interdisciplinary methodologies, we provide clear comparisons of how various search systems support or challenge the searcher.\n\n\nDiversity: Our vision embraces the multitude of ways people search, promoting a landscape where different methodologies coexist and evolve.\n\n\nOur commitment at SearchRights.org is clear: to move beyond the status quo and ensure the search landscape prioritizes and truly includes its users.\n\n\n  About\n  See the Table\n  See the Log\n",
       "snippet": "\n",
       "url": "/",
       "snippet_image": "",
@@ -381,7 +390,7 @@ var pages = [
           "assets/item_index.json"
         ,
       "tags": "",
-      "content": "{% assign index_title_only_list = \"feed-xml\" | split: \",\" %}\n\n[\n{% for post in site.posts %}\n  {% assign id = post.url | slugify %}\n  {\n    \"id\": \"{{ post.url | slugify }}\",\n    \"type\": \"posts\",\n    \"title\": \"{{ post.title | xml_escape }}\",\n    \"author\": \"{{ post.author | xml_escape }}\",\n    \"date\": \"{{ post.date | xml_escape }}\",\n    \"category\": \"{{ post.categories | xml_escape | replace: '&quot;', '' }}\",\n    \"tags\": \"{{ post.tags | xml_escape | replace: '&quot;', '' }}\",\n    \"boosts\": \"{{ post.boosts | xml_escape }}\",\n    {% unless index_title_only_list contains post.id or post.index_title_only %}\n    \"content\": {{ post.content | markdownify | strip_html | replace: '\\n', ' ' | jsonify }},\n    {% endunless %}\n    \"url\": \"{{ post.url | xml_escape }}\",\n    \"snippet\": {{ site.data.gpt-summaries[id] | jsonify }}\n  }\n  {% unless forloop.last %},{% endunless %}\n{% endfor %}\n{% if site.posts.size > 0 and site.pages.size > 0 %},{% endif %}\n{% for page in site.pages %}\n  {% if page.lunrjs != 'noindex' and page.layout != 'none' %}\n    {% if forloop.first and site.posts.size > 0 %},{% endif %}\n    {% assign id = page.url | slugify %}\n    {\n      \"id\": \"{{ page.url | slugify }}\",\n      \"type\": \n        {% if page.url contains 'diss/' %}\n          \"diss\"\n        {% elsif page.url contains 'shortcuts/' %}\n          \"shortcuts\"\n        {% elsif page.url contains 'courses/' %}\n          \"courses\"\n        {% elsif page.url contains 'tags/' %}\n          \"tags\"\n        {% else %}\n          \"pages\"\n        {% endif %},\n      \"date\": \"{{ page.date | xml_escape }}\",\n      \"title\": \n        {% if id == \"feed-xml\" %}\n          \"feed.xml\"\n        {% elsif id == \"redirects-json\" %}\n          \"redirects.json\"\n        {% else %}\n          \"{{ page.title | xml_escape }}\"\n        {% endif %},\n      \"boosts\": \"{{ page.boosts | xml_escape }}\",\n      \"tags\": \"{{ post.tags | replace: '\\\"', '' }}\",\n      {% unless index_title_only_list contains page.id or page.index_title_only %}\n      \"content\": {{ page.content | markdownify | strip_html | replace: '\\n', ' ' | jsonify }},\n      {% endunless %}\n      \"url\": \"{{ page.url | xml_escape }}\",\n      \"snippet\": {{ site.data.gpt-summaries[id] | jsonify }}\n    }\n    {% unless forloop.last %},{% endunless %}\n  {% endif %}\n{% endfor %}\n{% for external in site.data.external_pages %}\n  {% if forloop.first and site.pages.size > 0 %},{% endif %}\n  {\n    \"id\": \"{{ external.url | slugify }}\",\n    \"type\": \"{{ external.type }}\",\n    \"date\": \"{{ external.date }}\",\n    \"title\": \"{{ external.title }}\",\n    \"boosts\": \"{{ external.boosts }}\",\n    \"tags\": \"{{ external.tags | replace: '\\\"', '' }}\",\n    \"content\": {{ external.content | strip_html | strip_newlines | jsonify }},\n    \"url\": \"{{ external.url }}\",\n    \"snippet\": {{ external.snippet | jsonify }}\n  }\n  {% unless forloop.last %},{% endunless %}\n{% endfor %}\n]\n\n\n\n",
+      "content": "{% assign index_title_only_list = \"feed-xml\" | split: \",\" %}\n\n[\n{% for post in site.posts %}\n  {% assign id = post.url | slugify %}\n  {\n    \"id\": \"{{ post.url | slugify }}\",\n    \"type\": \"posts\",\n    \"title\": \"{{ post.title | xml_escape }}\",\n    \"author\": \"{{ post.author | xml_escape }}\",\n    \"date\": \"{{ post.date | xml_escape }}\",\n    \"category\": \"{{ post.categories | xml_escape | replace: '&quot;', '' }}\",\n    \"tags\": \"{{ post.tags | xml_escape | replace: '&quot;', '' }}\",\n    \"boosts\": \"{{ post.boosts | xml_escape }}\",\n    {% unless index_title_only_list contains post.id or post.index_title_only %}\n    \"content\": {{ post.content | markdownify | strip_html | replace: '\\n', ' ' | jsonify }},\n    {% endunless %}\n    \"url\": \"{{ post.url | xml_escape }}\",\n    \"snippet\": {{ site.data.gpt-summaries[id] | jsonify }}\n  }\n  {% unless forloop.last %},{% endunless %}\n{% endfor %}\n{% if site.posts.size > 0 and site.pages.size > 0 %},{% endif %}\n{% for page in site.pages %}\n  {% if page.lunrjs != 'noindex' and page.layout != 'none' %}\n    {% if forloop.first and site.posts.size > 0 %},{% endif %}\n    {% assign id = page.url | slugify %}\n    {\n      \"id\": \"{{ page.url | slugify }}\",\n      \"type\": \n        {% if page.url contains 'diss/' %}\n          \"diss\"\n        {% elsif page.url contains 'shortcuts/' %}\n          \"shortcuts\"\n        {% elsif page.url contains 'courses/' %}\n          \"courses\"\n        {% elsif page.url contains 'tags/' %}\n          \"tags\"\n        {% else %}\n          \"pages\"\n        {% endif %},\n      \"date\": \"{{ page.date | xml_escape }}\",\n      \"title\": \n        {% if id == \"feed-xml\" %}\n          \"feed.xml\"\n        {% elsif id == \"redirects-json\" %}\n          \"redirects.json\"\n        {% else %}\n          \"{{ page.title | xml_escape }}\"\n        {% endif %},\n      \"boosts\": \"{{ page.boosts | xml_escape }}\",\n      \"tags\": \"{{ post.tags | replace: '\\\"', '' }}\",\n      {% unless index_title_only_list contains page.id or page.index_title_only %}\n      \"content\": {{ page.content | markdownify | strip_html | replace: '\\n', ' ' | jsonify }},\n      {% endunless %}\n      \"url\": \"{{ page.url | xml_escape }}\",\n      \"snippet\": {{ site.data.gpt-summaries[id] | jsonify }}\n    }\n    {% unless forloop.last %},{% endunless %}\n  {% endif %}\n{% endfor %}\n{% for external in site.data.external_pages %}\n  {% if forloop.first and site.pages.size > 0 %},{% endif %}\n  {\n    \"id\": \"{{ external.url | slugify }}\",\n    \"type\": \"{{ external.type }}\",\n    \"date\": \"{{ external.date }}\",\n    \"title\": \"{{ external.title }}\",\n    \"boosts\": \"{{ external.boosts }}\",\n    \"tags\": \"{{ external.tags | replace: '\\\"', '' }}\",\n    \"content\": {{ external.content | strip_html | strip_newlines | jsonify }},\n    \"url\": \"{{ external.url }}\",\n    \"snippet\": {{ external.snippet | jsonify }}\n  }\n  {% unless forloop.last %},{% endunless %}\n{% endfor %}\n]",
       "snippet": "\n",
       "url": "/assets/item_index.json",
       "snippet_image": "",
@@ -465,6 +474,33 @@ var pages = [
       "content": "@import \"minima\";\n",
       "snippet": "\n",
       "url": "/assets/main.css",
+      "snippet_image": "",
+      "snippet_image_alt": "",
+      "snippet_image_class": ""
+    }
+    ,
+    
+  
+    
+    
+    {
+      "id": "redirects-json",
+      
+      
+      "type": 
+        
+          "pages"
+        ,
+
+      "date": "",
+      "title": 
+        
+          "redirects.json"
+        ,
+      "tags": "",
+      "content": "{}",
+      "snippet": "\n",
+      "url": "/redirects.json",
       "snippet_image": "",
       "snippet_image_alt": "",
       "snippet_image_class": ""
@@ -759,7 +795,7 @@ var pages = [
           "Category: Example searches"
         ,
       "tags": "",
-      "content": "\n  Category: {{ page.category }}\n  \n    \n      \n        Purpose: \n        {{ page.purpose }}\n      \n      \n        Criteria: \n      \n      \n        {% for criteria in page.criteria_list %}\n          \n            {{ criteria.criteria }}\n          \n        {% endfor %}\n      \n      \n        Details: \n        {{ page.details | markdownify }}\n      \n    \n  \n\n",
+      "content": "\n  Category: {{ page.category }}\n  \n    \n      \n        Purpose: \n        {{ page.purpose }}\n      \n      \n        Criteria: \n      \n      \n        {% for criteria in page.criteria_list %}\n          \n            {{ criteria.criteria }}\n          \n        {% endfor %}\n      \n      \n        Details: \n        {{ page.details | markdownify }}\n      \n    \n  \n",
       "snippet": "\n",
       "url": "/categories/example-searches.html",
       "snippet_image": "",
@@ -786,7 +822,7 @@ var pages = [
           "Category: Sharing searching"
         ,
       "tags": "",
-      "content": "\n  Category: {{ page.category }}\n  \n    \n      \n        Purpose: \n        {{ page.purpose }}\n      \n      \n        Criteria: \n      \n      \n        {% for criteria in page.criteria_list %}\n          \n            {{ criteria.criteria }}\n          \n        {% endfor %}\n      \n      \n        Details: \n        {{ page.details | markdownify }}\n      \n    \n  \n\n",
+      "content": "\n  Category: {{ page.category }}\n  \n    \n      \n        Purpose: \n        {{ page.purpose }}\n      \n      \n        Criteria: \n      \n      \n        {% for criteria in page.criteria_list %}\n          \n            {{ criteria.criteria }}\n          \n        {% endfor %}\n      \n      \n        Details: \n        {{ page.details | markdownify }}\n      \n    \n  \n",
       "snippet": "\n",
       "url": "/categories/sharing-searching.html",
       "snippet_image": "",
@@ -813,7 +849,7 @@ var pages = [
           "Category: Standards &amp; Openness"
         ,
       "tags": "",
-      "content": "\n  Category: {{ page.category }}\n  \n    \n      \n        Purpose: \n        {{ page.purpose }}\n      \n      \n        Criteria: \n      \n      \n        {% for criteria in page.criteria_list %}\n          \n            {{ criteria.criteria }}\n          \n        {% endfor %}\n      \n      \n        Details: \n        {{ page.details | markdownify }}\n      \n    \n  \n\n",
+      "content": "\n  Category: {{ page.category }}\n  \n    \n      \n        Purpose: \n        {{ page.purpose }}\n      \n      \n        Criteria: \n      \n      \n        {% for criteria in page.criteria_list %}\n          \n            {{ criteria.criteria }}\n          \n        {% endfor %}\n      \n      \n        Details: \n        {{ page.details | markdownify }}\n      \n    \n  \n",
       "snippet": "\n",
       "url": "/categories/standards-and-openness.html",
       "snippet_image": "",
@@ -951,33 +987,6 @@ var pages = [
       "content": "{% assign colspan_size = 2 %}\n{{ page.system.name }}\n{{ page.system.url }}\n\n\nIndividual marks:\n\n{% include_cached table_head.html system_page=true system=page.system %}\n\n{% for file in site.data.evaluations %}\n{% assign evaluation_file = file[1] %} \n{% include_cached category_row.html system_page=true evaluation_file=evaluation_file colspan_size=colspan_size %}\n{% for criteria in evaluation_file.evaluations %}\n\n{% include_cached criteria_row.html criteria=criteria system_page=true system=page.system use_url=true %}\n{% endfor %}\n\n{% endfor %}\n\n\n\n",
       "snippet": "\n",
       "url": "/systems/you-search.html",
-      "snippet_image": "",
-      "snippet_image_alt": "",
-      "snippet_image_class": ""
-    }
-    ,
-    
-  
-    
-    
-    {
-      "id": "redirects-json",
-      
-      
-      "type": 
-        
-          "pages"
-        ,
-
-      "date": "",
-      "title": 
-        
-          "redirects.json"
-        ,
-      "tags": "",
-      "content": "{}",
-      "snippet": "\n",
-      "url": "/redirects.json",
       "snippet_image": "",
       "snippet_image_alt": "",
       "snippet_image_class": ""

@@ -34,10 +34,13 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 
 # 2023-10-05
-gem "jekyll-sitemap"
-gem 'jekyll-gzip'
-gem 'jekyll-redirect-from'
-gem 'nokogiri'
-gem 'jekyll-include-cache'
-
-gem "jekyll-sass-converter", "~> 2.0" 
+group :jekyll_plugins do
+  gem "jekyll-sitemap"
+  gem 'jekyll-gzip'
+  gem 'jekyll-redirect-from'
+  gem 'nokogiri'
+  gem 'jekyll-include-cache'
+  gem "jekyll-sass-converter", "~> 2.0" 
+  gem 'jekyll-scholar', group: :jekyll_plugins
+  gem "webrick", "~> 1.7"
+end

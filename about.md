@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-slug: about
 card: "summary"
 summary_large_image: True
 description: "About SearchRights.org"

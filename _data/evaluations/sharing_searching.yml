@@ -1,7 +1,7 @@
 category: "Sharing searching"
 category_slug: "sharing-searching"
 purpose: "Support users in sharing their search experience with others."
-details: "Research demonstrates significant value in users communicating about their experiences with tools. Better support for sharing interactions with these systems may improve users collective ability to effectively question/complain, teach, & organize about/around/against these tools (i.e. \"working around platform errors and limitations\" & \"virtual assembly work\" [@burrell2019control], \"repairing searching\" [@griffin2022situating], search quality complaints [@griffin2022search], and end-user audits [@metaxa2021auditing; @lam2022end]) and improve our \"practical knowledge\" of the systems [@cotter2022practical]."
+details: "Research demonstrates significant value in users communicating about their experiences with tools. Better support for sharing interactions with these systems may improve users collective ability to effectively question/complain, teach, & organize about/around/against these tools (i.e. \"working around platform errors and limitations\" & \"virtual assembly work\" {% cite burrell2019control %}, \"repairing searching\" {% cite griffin2022situating %}, search quality complaints {% cite griffin2022search %}, and end-user audits {% cite metaxa2021auditing lam2022end %}) and improve our \"practical knowledge\" of the systems {% cite cotter2022practical %}."
 evaluations:
   - criteria: "Can you share a link to the results or conversation?"
     criteria_slug: "can-you-share-a-link-to-the-results-or-conversation"
