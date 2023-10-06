@@ -21,7 +21,8 @@ layout: page
       </ul>
       <p class="h6 p-1 m-0">
         <b id="detailsLabel">Details</b>: 
-        <span aria-labelledby="detailsLabel">{{ page.details | markdownify }}</span>
+        {% capture details %}{{ page.details | markdownify }}{% endcapture %}
+        <span aria-labelledby="detailsLabel">{{ details | markdownify }}</span>
       </p>
     </div>
   </div>

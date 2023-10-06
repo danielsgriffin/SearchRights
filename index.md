@@ -3,7 +3,7 @@ layout: page
 title: SearchRights
 card: "summary"
 summary_large_image: True
-description: "Comparative Search User Integration Rx - Recipe / Reception / Research / Review"
+description: "Dedicated to assessing search systems with a user-first framework, championing searcher rights and refusing the status quo."
 image: /images/SearchRights-sample-2023-09-21-16_59_35.png_resized.png
 image_alt: "Image of the webpage."
 date: 2023-09-08 14:59:16 -0700

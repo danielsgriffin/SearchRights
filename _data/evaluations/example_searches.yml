@@ -1,7 +1,7 @@
 category: "Example searches"
 category_slug: "example-searches"
 purpose: "Help users practice new ways of imagining and formulating queries."
-details: "Research suggests that effective prompting of LLMs can be challenging [@zamfirescu-pereira2023johnny] and query formulation even in mainstream web search engines is complicated [@tripodi2018searching]. @mollick2023useful, not specifically re search systems, has called for <a href=\"/excerpts/2023/09/08/large-scale-public-libraries-of-prompts.html\">\"large-scale public libraries of prompts\"</a>."
+details: "Research suggests that effective prompting of LLMs can be challenging {% cite zamfirescu-pereira2023johnny %} and query formulation even in mainstream web search engines is complicated {% cite tripodi2018searching %}. {% cite-inline mollick2023useful %}, not specifically re search systems, has called for <a href=\"/excerpts/2023/09/08/large-scale-public-libraries-of-prompts.html\">\"large-scale public libraries of prompts\"</a>."
 evaluations:
   - criteria: "Are there default example searches?"
     criteria_details: "Comment: It may be interesting to also consider whether these queries demonstrate an advantage of the generative search capabilities or not."

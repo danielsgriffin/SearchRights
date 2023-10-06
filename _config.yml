@@ -48,3 +48,6 @@ gzip:
     - '.xml'
 
 timezone: America/Los_Angeles
+
+scholar:
+  style: apa

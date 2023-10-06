@@ -1,4 +1,5 @@
 module Jekyll
+
   class GenerateSearchRightsPages < Generator
     def generate(site)
       puts "         Generating SearchRightsPages..."
@@ -110,32 +111,19 @@ module Jekyll
 
       # Set the title
       self.data['title'] = "Category: " + category
-
-      # Let's find the jekyll-scholar converter indirectly:
-      scholar = nil
-      site.converters.each do |converter|
-          if converter.class.to_s.include?("Jekyll::Scholar")
-              scholar = converter
-              break
-          end
-      end
-
-      # # Let's process the details data with jekyll-scholar here:
-      # if details && scholar
-      #     processed_details = scholar.bibtex_filters(details) # Trying the bibtex_filters method instead.
-      #     self.data['details'] = processed_details
-      # else
-      self.data['details'] = details
-      # end
       
+      # Use render_inline_citations.rb to process 'details'
+      self.data['details'] = Jekyll::RenderInlineCitations.render_citations(details)
+
       # Define properties to access in the category_page layout
       self.data['category'] = category
       self.data['purpose'] = purpose
       self.data['criteria_list'] = criteria_list
       
     end
-
+    # The following methods are private and can only be called within this class
     private
+
 
     def shorten_and_clean_criteria(criteria)
       cleaned = criteria.gsub(/[?()"@\[\]]/,'').gsub(/\s+/, '-').downcase

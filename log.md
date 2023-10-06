@@ -13,11 +13,11 @@ location: Everett
 author: Daniel Griffin
 ---
 
-- 2023-09-08 15:08:02 Added to the 'Is there a "searchable repository of examples" [@zamfirescu-pereira2023johnny]?' remark for Perplexity AI:
+- 2023-09-08 15:08:02 Added to the 'Is there a "searchable repository of examples" {% cite zamfirescu-pereira2023johnny %}?' remark for Perplexity AI:
 
     > `# 🔎 │ ask` channel in the Discord channel: "ask \@PerplexityAI anything. Check pinned for usage." (with a weekly challenge for the best question; pinned message show example queries (note these are queries of their Discord bot))
 
-- 2023-09-08 15:09:22 Added to the 'Is there a "searchable repository of examples" [@zamfirescu-pereira2023johnny]?' criteria comment:
+- 2023-09-08 15:09:22 Added to the 'Is there a "searchable repository of examples" {% cite zamfirescu-pereira2023johnny %}?' criteria comment:
     
     > See also [the LangChain Hub prompt repository](/docs/2023/09/08/the-langchain-hub.html) (not searchable).
 
@@ -26,7 +26,7 @@ author: Daniel Griffin
     > @mollick2023useful, not specifically re search systems, has called for <a href="/excerpts/2023/09/08/large-scale-public-libraries-of-prompts.html">"large-scale public libraries of prompts"</a>
 
 
-- 2023-09-08 15:31:06 Added link to the 'Is there a "searchable repository of examples" [@zamfirescu-pereira2023johnny]?' criteria text: to ["A searchable repository of examples..."](/excerpts/2023/09/08/a-searchable-repository-of-examples.html)
+- 2023-09-08 15:31:06 Added link to the 'Is there a "searchable repository of examples" {% cite zamfirescu-pereira2023johnny %}?' criteria text: to ["A searchable repository of examples..."](/excerpts/2023/09/08/a-searchable-repository-of-examples.html)
 
 - 2023-09-08 15:53:17 Added a paragraph re ragas under Scoping:
 
@@ -41,3 +41,8 @@ author: Daniel Griffin
 - 2023-09-21 14:03:18 Updated Phind's mark for . I previously had it noted that you had to be signed in to share a search. I do not have documentation of that previous claim. Currently you do not need to be signed in.
 - 2023-09-27 11:53:34 Added a 'Sharing searching' criteria: [Are share links (or links to searches) indexed and searchable in search engines (or the system itself)?](/criteria/share-links-indexed-and-searchable.html#table) (and made various UI changes).
 - 2023-10-05 10:26:14 Transferred from danielsgriffin/projects/csuirx to SearchRights.org and rebranded from CSUIRx to SearchRights
+
+
+## Works Cited
+
+{% bibliography --cited %}
