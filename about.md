@@ -11,6 +11,7 @@ tags:
 location: Everett
 author: Daniel Griffin
 ---
+
 {% include intro.md %}
 
 #### Initial Search Systems
@@ -26,6 +27,12 @@ author: Daniel Griffin
 {% include scoping.md %}
 
 ## Roadmap
+
+### Under Construction
+
+This is presently very much under construction, much more a speculative prototype than a full-fledged system. A proper system will require many more people working together. I am not proposing I have the "solution" or could build out a framework like this alone. **This is just part of my joining the conversation about what search might be.**
+
+### TODO
 
 Add to system pages (background, reference data, reflections); scraping; interviews and guest commentary; glossary; reading list; suggested class exercises and discussion questions; add search functionality.
 

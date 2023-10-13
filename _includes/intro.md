@@ -3,7 +3,7 @@
 
 <div class="border m-0 p-0">
 <p class="m-0 px-2 pt-2 pb-1 text-muted small">Draft edited {{ "2023-09-20 22:11:23 -0700" | date: "%B %d, %Y %I:%M %p (%Z)" }}</p>
-<p class="m-0 px-2 pt-1 pb-2 text-muted small">See [the initial post here](https://danielsgriffin.com/ppost/2023/09/07/planning-SearchRights.html).</p>
+<p class="m-0 px-2 pt-1 pb-2 text-muted small">See <a href="https://danielsgriffin.com/ppost/2023/09/07/planning-SearchRights.html">the initial post here</a>.</p>
 </div>
 
 <p class="m-0 p-2">This hosts the provisional comparative evaluation of new web search systems with a focus on dimensions around integrating with users' curiosity-engagement, question-generation, response validation, search repair, search sharing, complaint and feedback, and other concerns at the core of my research.</p>

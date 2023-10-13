@@ -24,7 +24,7 @@ author: Daniel Griffin
 </div> -->
 <div class="col-lg-6">
 <p class="lead">
-<span class="h5">Welcome to SearchRights.org</span>, a platform dedicated to the evaluation and promotion of search systems that focus on including the user. We critically evaluate search systems based on a robust, user-centric framework. We examine how search systems (from engines and agents to frameworks and tools) support searcher rights to:</p>
+<span class="h5">Welcome to SearchRights.org</span>, a platform (<a href="/about#under-construction">under construction</a>) dedicated to the evaluation and promotion of search systems that focus on including the user. We critically evaluate search systems based on a robust, user-centric framework. We examine how search systems (from engines and agents to frameworks and tools) support searcher rights to:</p>
 <ul>
 <li><strong>Compare</strong>: Explore and develop practical knowledge of various search systems for informed decisions.</li>
 <li><strong>Complain &amp; Contest</strong>: Challenge systems when they fall short of user needs or expectations.</li>
