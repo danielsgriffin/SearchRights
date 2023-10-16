@@ -1,0 +1,64 @@
+category: "Supporting feedback"
+category_slug: "feedback"
+purpose: "Help users develop, submit, and share feedback."
+details: "Mechanisms to support feedback will shape user expectations, experiences, and future improvements of the search landscape. Some approaches may excessively conceal or otherwise control complaint rather than focusing on the users."
+evaluations:
+  - criteria: "Is there a clear contextually relevant feedback method for core search functionality?"
+    criteria_details: "This is distinct from having a Contact or Feedback link buried off-page or in a footer."
+    criteria_slug: "contextually-relevant-feedback-method"
+    andi:
+      value: "no"
+      details: "Clicking '<a href=\"https://andisearch.com/contact\">Contact</a>' on the left sidebar will open a page with links to a Feedback form and Bug Report form and a note that you can initiate them within the interface by typing `/feedback` or `/bug`."
+    metaphor:
+      value: "no"
+    perplexity:
+      value: "yes"
+      details: "There is a flag (\"Not accurate\") button at the bottom of the response. There is a question mark button (a dropup with options including a Help & FAQ link). The <a href=\"https://blog.perplexity.ai/faq\">FAQ page</a> has a Feedback link in the footer that sends the user to a survey."
+    phind:
+      value: "yes"
+      details: "There are thumbs up (\"Good answer.\") / down (\"Bad answer.\") buttons at the bottom of the response fields."
+    you:
+      value: "yes"
+      details: "There are thumbs up (\"This answer is helpful and/or accurate. Provide feedback on this result.\") / down (\"This answer is not helpful, accurate, and/or safe. Provide feedback on this result.\") buttons at the bottom of the response fields. There is a general 'Give feedback' button at the bottom left of the screen (which links to <a href=\"https://yousearch.canny.io/\">You.com's Canny.io page</a>)."
+  - criteria: "Do users receive a copy of feedback?"
+    criteria_slug: "users-receive-copy-of-feedback"
+    andi:
+      value: "not yet evaluated"
+    metaphor:
+      value: "not yet evaluated"
+    perplexity:
+      value: "not yet evaluated"
+    phind:
+      value: "not yet evaluated"
+    you:
+      value: "partial"
+      details: "Feedback left on <a href=\"https://yousearch.canny.io/\">You.com's Canny.io page</a> appears to be persistent."
+  - criteria: "Is the feedback record easily shared by the user with a web-accessible link?"
+    criteria_slug: "feedback-record-shareable"
+    andi:
+      value: "not yet evaluated"
+    metaphor:
+      value: "not yet evaluated"
+    perplexity:
+      value: "not yet evaluated"
+    phind:
+      value: "not yet evaluated"
+    you:
+      value: "partial"
+      details: "Feedback left on <a href=\"https://yousearch.canny.io/\">You.com's Canny.io page</a> can be linked to."
+  - criteria: "Can users opt-in to contribute feedback to a commons-based infrastructure?"
+    criteria_details: "Sharing feedback from users in a transparent and privacy-preserving manner may improve the larger search landscape. Something like commons-based infrastructures, interfaces, or record repositories already exist for other factors, like <a href=\"https://www.indexnow.org/\">IndexNow</a>, <a href=\"https://www.lumendatabase.org/\">Lumen</a>, the <a href=\"https://schema.org/ClaimReview\">ClaimReview schema</a>, robots.txt, the OpenSearch protocol, research datasets and benchmarks, etc.<br><br>These are resources that search systems may contribute to, respect, or draw on.<br>Research shows that search systems already rely heavily on Wikipedia (see especially, {% cite-inline mcmahon2017substantial %}).<br><hr>Note: The proximate cause of adding this criteria was the responses from the CEOs of Perplexity AI and You.com to <a href=\"https://twitter.com/ylecun/status/1713751182601015729\">a Oct 15, 2023 comment from Yann LeCun (Chief AI Scientist at Meta)</a>:<br><blockquote>Human feedback for open source LLMs needs to be crowd-sourced, Wikipedia style.<br><br>It is the only way for LLMs to become the repository of all human knowledge and cultures.<br><br>Who wants to build the platform for this?</blockquote><br>"
+    criteria_slug: "opt-in-contribute-feedback"
+    criteria_last_update: 2023-09-21 14:03:18 -0700
+    andi:
+      value: "no"
+    metaphor:
+      value: "no"
+    perplexity:
+      value: "no"
+      details: "In response to the question from Yann LeCun, <a href=\"https://twitter.com/AravSrinivas/status/1713753686189429064\">Aravind Srinivas (Perplexity AI's CEO) said (on Oct 15, 2023)</a>: <blockquote><a href=\"https://www.perplexity.ai/\">perplexity.ai</a></blockquote>"
+    phind:
+      value: "no"
+    you:
+      value: "no"
+      details: "In response to the question from Yann LeCun, <a href=\"https://twitter.com/RichardSocher/status/1713809819336159376\">Richard Socher (You.com's CEO) said (on Oct 15, 2023)</a>: <blockquote>I've been saying similar things for a while. We'd be down to help coordinate at <a href=\"https://you.com\">you.com</a> and allow users to opt-in to contribute feedback for specific answers..</blockquote>"

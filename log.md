@@ -41,6 +41,9 @@ author: Daniel Griffin
 - 2023-09-21 14:03:18 Updated Phind's mark for . I previously had it noted that you had to be signed in to share a search. I do not have documentation of that previous claim. Currently you do not need to be signed in.
 - 2023-09-27 11:53:34 Added a 'Sharing searching' criteria: [Are share links (or links to searches) indexed and searchable in search engines (or the system itself)?](/criteria/share-links-indexed-and-searchable.html#table) (and made various UI changes).
 - 2023-10-05 10:26:14 Transferred from danielsgriffin/projects/csuirx to SearchRights.org and rebranded from CSUIRx to SearchRights
+- 2023-10-16 16:03:08 Added a new category: [Supporting feedback](/categories/feedback)
+- 2023-10-16 16:03:56 Added note re Perplexity AI's API offerings in [criteria/is-there-an-api-for-search](/criteria/is-there-an-api-for-search.html)
+- 2023-10-16 16:51:42 Added a new criteria in Standards & Openness: [criteria/provide-open-source-models](/criteria/provide-open-source-models.html)
 
 
 ## Works Cited

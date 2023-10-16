@@ -65,13 +65,17 @@ position: relative;
     background-color: rgba(221, 204, 119, 0.1);
 }
 
-.detail a {
+/*.detail a {
+    font-size: 0.9em;
+}
+
+.detail p {
     font-size: 0.9em;
 }
 
 .detail li {
     font-size: 0.9em;
-}
+}*/
 
 
 
@@ -146,4 +150,22 @@ a.nav-link.active {
 .shifted-svg {
   position: relative;
   top: -5px; /* Adjust this value to shift the SVG up as required */
+}
+
+blockquote {
+  /* Adding space around the text for better readability */
+  padding: 10px 20px; 
+  /* Adding the vertical line on the left side */
+  border-left: 5px solid #999999; 
+  /* Indenting the entire blockquote */
+  margin-left: 30px; 
+  /* Optional: Change background color slightly to further distinguish the blockquote */
+  background-color: #f2f2f2;
+  /* Optional: You can also style the text inside the blockquote */
+/*  font-style: italic; */
+  /* Ensuring that there are no initial styles or margins, makes it consistent across browsers */
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  /* If you want rounded corners */
+  border-radius: 5px; 
 }
