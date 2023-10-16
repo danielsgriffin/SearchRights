@@ -58,11 +58,12 @@ module Jekyll
 
       # Add the URL back to the criteria data
       criteria['url'] = criteria_url
+      criteria['criteria_details'] = Jekyll::RenderInlineCitations.render_citations(criteria['criteria_details'])
 
       # Define properties to access in the criteria_page layout
       self.data['category'] = evaluation_file["category"]
       self.data['category_url'] = evaluation_file["category_slug"]
-      self.data['criteria'] = criteria
+      self.data['criteria'] = criteria      
       self.data['systems'] = systems
       self.data['description'] = criteria['og_description']
       self.data['image'] = criteria['og_image']
