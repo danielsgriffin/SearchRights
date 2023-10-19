@@ -24,3 +24,9 @@ author: Daniel Griffin
 {% endfor %}
 </tbody>
 </table>
+
+<h3>Works Cited</h3>
+
+<div class="mx-3">
+{% bibliography %}
+</div>

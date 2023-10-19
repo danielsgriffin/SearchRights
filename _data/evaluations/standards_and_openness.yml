@@ -20,9 +20,9 @@ evaluations:
       value: "yes"
       details: "Example: <a href=\"https://you.com/search?q=What+is+an+LLM%3F&tbm=youchat\">What is an LLM?</a>"
   - criteria: "Is there an API for search?"
-    criteria_details: "Searching by API may better support evaluations of the search results and the development of modifications or extensions building on or with the search system."
+    criteria_details: "Searching by API may better support evaluations of the search results and the development of modifications or extensions building on or with the search system.<br><br>We do not currently evaluate the performance of the API or restrictions on access (You.com, for instance, <a href=\"https://colab.research.google.com/github/You-OpenSource/You-API-Examples/blob/main/blogpost_final.ipynb\">says this</a>: <blockquote>If you are interested in being an early access partner please email api@you.com with your usecase, background, and expected daily load.</blockquote> Other search enginesthat provide some form of API include the <a href=\"https://brave.com/search/api/\">Brave Search API</a>, Google (through their <a href=\"https://developers.google.com/custom-search/v1/overview\">Programmable Search Engine's Custom Search JSON API</a>), Microsoft's <a href=\"https://www.microsoft.com/en-us/bing/apis/bing-web-search-api\">Bing Web Search API</a>, and the <a href=\"https://cloud.yandex.com/en/services/search-api\">Yandex Search API</a>.<br><br>You can also get programmatic or tool-based access to web search results from many third party providers that scrape search results from search engines. For example, academic researchers have conducted research using data from <a href=\"https://serpapi.com/\">SerpAPI</a> {% cite zade2022auditing %} and <a href=\"https://ahrefs.com\">Ahrefs</a> {% cite williams2023search %}."
     criteria_slug: "is-there-an-api-for-search"
-    criteria_last_update: 2023-10-16 16:07:24 -0700
+    criteria_last_update: 2023-10-18 23:01:13 -0700
     andi:
       value: "no"
     metaphor:
@@ -34,8 +34,8 @@ evaluations:
     phind:
       value: "no"
     you:
-      value: "no"
-      details: "<blockquote class=\"text-smaller\">You.com does not offer an API for search or chat at this time. However, we are considering creating one in the future. If you would like to be notified when this happens, fill out the form <a href=\"https://about.you.com/api/\">here</a>.</blockquote> <a href=\"https://about.you.com/hc/getting-started/does-you-com-offer-an-api/\">source</a>"
+      value: "yes"
+      details: "<small>Updated Oct 18, 2023</small><br>On Oct 18 <a href=\"https://twitter.com/LangChainAI/status/1714695503248585110\">LangChain announced</a> support for <a href=\"https://api.python.langchain.com/en/latest/retrievers/langchain.retrievers.you.YouRetriever.html\">YouRetriever</a>, using a search API from You.com. LangChain shared a guest blog post from You.com (<a href=\"https://blog.langchain.dev/you-com-x-langchain/\">\"You.com x LangChain\"</a>) and <a href=\"https://colab.research.google.com/github/You-OpenSource/You-API-Examples/blob/main/blogpost_final.ipynb\">an interactive notebook</a>. Some documentation is also available on You.com's website (with an example query: <span class=\"search-query-bracket\">[</span>reasons to smile<span class=\"search-query-bracket\">]</span>: <a href=\"https://documentation.you.com/quickstart\">Documentation &gt; Using the Search API</a><br>(Note: \"To use the You.com Search API, you will need an API key. Please reach out via email at api@you.com for more details.\").<br><hr><small>Previously:</small><blockquote class=\"text-smaller\">You.com does not offer an API for search or chat at this time. However, we are considering creating one in the future. If you would like to be notified when this happens, fill out the form <a href=\"https://about.you.com/api/\">here</a>.</blockquote> <a href=\"https://about.you.com/hc/getting-started/does-you-com-offer-an-api/\">source</a>"
   - criteria: "Does the system provide open-source models?"
     criteria_details: "Providing open source models can advance the general search landscape as well as help users better understand the capabilities and limitations of the search system."
     criteria_slug: "provide-open-source-models"
