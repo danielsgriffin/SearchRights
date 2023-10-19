@@ -44,7 +44,7 @@ author: Daniel Griffin
 - 2023-10-16 16:03:08 Added a new category: [Supporting feedback](/categories/feedback)
 - 2023-10-16 16:03:56 Added note re Perplexity AI's API offerings in [criteria/is-there-an-api-for-search](/criteria/is-there-an-api-for-search.html)
 - 2023-10-16 16:51:42 Added a new criteria in Standards & Openness: [criteria/provide-open-source-models](/criteria/provide-open-source-models.html)
-
+- 2023-10-19 01:21:36 Updated mark to 'Yes' for You.com in [criteria/is-there-an-api-for-search](/criteria/is-there-an-api-for-search.html); added to criteria details.
 
 ## Works Cited
 
