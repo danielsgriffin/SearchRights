@@ -37,7 +37,7 @@ evaluations:
     you:
       value: "partial"
       details: "The share link interface consists of the share button icon and a popup which says 'Share YouChat transcript' and 'Anyone with a link will be able to view your full transcript with YouChat in this session.' and presents a link to the search:<br><img class=\"img-fluid img-thumbnail open-modal\" src=\"/images/youchatsharelink_2023-09-20-11_12_21.png\" alt=\"You.com Chat share link showing the text: 'Share YouChat transcript' and 'Anyone with a link will be able to view your full transcript with YouChat in this session.' and a link: 'https://you.com/search?q=who+are+you&tbm=youchat'.\" data-toggle=\"modal\" data-target=\"#imageModal\" role=\"button\" aria-label=\"Click to view a larger image of You.com Chat's share link\">"
-  - criteria: "Do shared links update if the sharee's interaction with the system continues??"
+  - criteria: "Do shared links update if the sharee's interaction with the system continues?"
     criteria_details: "Example: Here is the interaction in ChatGPT, per <a href=\"https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq\">ChatGPT Shared Links FAQ</a>: <blockquote>If I continue the conversation after I create a shared link, will the rest of my conversation appear in the shared link?<br><br>No. Think of a shared link as a snapshot of a conversation up to the point at which you generate the shared link.</blockquote>"
     andi:
       value: "N/A"

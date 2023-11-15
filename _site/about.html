@@ -124,7 +124,7 @@
 <small style="line-height: 0; display: block;">&nbsp;</small>
 <small>Please provide feedback at <a href="https://github.com/danielsgriffin/SearchRights/issues" class="text-light">github/danielsgriffin/SearchRights/issues</a> or via email to <a href="mailto:daniel.griffin@berkeley.edu?subject=[SearchRights.org]" class="text-light">daniel.griffin@berkeley.edu</a>.</small>
 </div></div>
-<div class="bg-light border-bottom border-top d-flex justify-content-center mb-1">
+<div class="bg-light border-bottom border-top d-flex justify-content-center mb-1 flex-wrap">
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
 <a class="navbar-brand pl-2" href="/">SearchRights</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -177,7 +177,7 @@ Can you share a link to the results or conversation? </a>
 Is there an explanation of how the share interface works provided or linked to in the interface itself? </a>
 
 <a class="dropdown-item" href="/criteria/do-shared-links-update-if-the-s.html">
-Do shared links update if the sharee's interaction with the system continues?? </a>
+Do shared links update if the sharee's interaction with the system continues? </a>
 
 <a class="dropdown-item" href="/criteria/is-there-a-social-share-card.html">
 Is there a social share card? </a>
@@ -261,16 +261,32 @@ Search Systems
 </div>
 </li>
 </ul>
-<!-- <form class="form-inline my-1 ml-5 my-lg-0"> -->
-  <!-- search w/ FlexSearch -->
-  <!-- <input id="search-input" class="form-control p-0 m-0 mr-sm-1 pl-1" style="width: 200px; height: 30px;" type="search" placeholder="Search SearchRights..." aria-label="Search"> -->
-<!-- </form> -->
+
 </div>
 </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
+<form class="form-inline my-1 ml-2 my-lg-0">
+  <!-- search w/ FlexSearch -->
+  <input id="search-input" class="form-control p-0 m-0 mr-sm-1 pl-1" style="width: 200px; height: 30px;" type="search"
+    placeholder="Search..." aria-label="Search">
+</form>
+</nav>
 </div>
-<!-- <div id="search-results" class="text-left flexsearch-dropdown-menu"></div> -->
+<!-- display FlexSearch results -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 ml-auto">
+      <div id="search-results" class="text-left ml-5 border my-3 py-0 flexsearch-dropdown-menu p-3 hidden"></div>
+    </div>
+  </div>
+</div>
 
 <style>
+
+.hidden {
+  display: none;
+}
+
 #search-input {
 padding: 10px;
 width: 300px;
@@ -279,7 +295,7 @@ border: 1px solid #ddd;
 
 #search-results a {
 display: block;
-padding: 5px;
+/*padding: 5px;*/
 text-decoration: none;
 color: #333;
 }
@@ -288,11 +304,15 @@ color: #333;
 background-color: #f5f5f5;
 }
 
+#search-results a.hover {
+background-color: #f5f5f5;
+}
+
 </style>
 
 
-<!-- <script src="/js/vendor/flexsearch.bundle.js"></script> -->
-<!-- <script src="/js/search/flexsearch_implementation_SearchRights.js"></script> -->
+<script src="/js/vendor/flexsearch.bundle.js"></script>
+<script src="/js/search/flexsearch_implementation.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -542,7 +562,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Are there default example searches?"
@@ -569,7 +589,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Do default example searches have contextually relevant explanation on sourcing?"
@@ -596,7 +616,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Is there a &quot;searchable repository of examples&quot;?"
@@ -650,7 +670,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Is there an explanation of how the share interface works provided or linked to in the interface itself?"
@@ -677,10 +697,10 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
-          "Criteria: Do shared links update if the sharee&apos;s interaction with the system continues??"
+          "Criteria: Do shared links update if the sharee&apos;s interaction with the system continues?"
         ,
       "tags": "",
       "content": "{% assign description = page.criteria.criteria %}\nCategory: {{ page.category }}\nCriteria: {{ page.criteria.criteria }}\n\n  Table View\n  Card View\n\n\n\n\n\n{% include_cached table_head.html is_criteria_page=true systems=site.data.systems %}\n\n{% include_cached criteria_row.html criteria=page.criteria system_page =false use_url=false %}\n\n\n\n\n\n  \n    \n\n\n\n{{ page.criteria.criteria_details }}\n\n\n{% for system in site.data.systems %}\n\n\n    \n        \n            {{ system.name }}\n        {% if use_criteria[system.id].value == 'N/A' %}{% else %}{% endif %}\n            {{ page.criteria.criteria }}\n            \n              {% if use_criteria[system.id].value == 'N/A' %}{{ use_criteria[system.id].value }}{% else %}{{ page.criteria[system.id].value | capitalize }}{% endif %}\n              {% if page.criteria[system.id].screenshots %}{% for screenshot in page.criteria[system.id].screenshots %}{% assign screenshot = screenshot %}\n        {% endfor %}\n        {% endif %}\n\n                {% if page.criteria[system.id].details %}\n                \n                {{ page.criteria[system.id].details | newline_to_br }}{% endif %}{% if page.criteria[system.id].comment %}{% assign comment = page.criteria[system.id].comment %}{{ comment }}{% endif %}\n            \n        \n    \n\n{% endfor %}\n\n\n\n\n\n\n\n\n\n",
@@ -704,7 +724,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Is there a social share card?"
@@ -758,7 +778,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Can you search by URL?"
@@ -839,7 +859,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Is there a clear contextually relevant feedback method for core search functionality?"
@@ -866,7 +886,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Do users receive a copy of feedback?"
@@ -893,7 +913,7 @@ var pages = [
           "pages"
         ,
 
-      "date": "2023-10-19",
+      "date": "2023-11-14",
       "title": 
         
           "Criteria: Is the feedback record easily shared by the user with a web-accessible link?"

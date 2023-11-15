@@ -4,7 +4,7 @@
 <small style="line-height: 0; display: block;">&nbsp;</small>
 <small>Please provide feedback at <a href="https://github.com/danielsgriffin/SearchRights/issues" class="text-light">github/danielsgriffin/SearchRights/issues</a> or via email to <a href="mailto:daniel.griffin@berkeley.edu?subject=[SearchRights.org]" class="text-light">daniel.griffin@berkeley.edu</a>.</small>
 </div></div>
-<div class="bg-light border-bottom border-top d-flex justify-content-center mb-1">
+<div class="bg-light border-bottom border-top d-flex justify-content-center mb-1 flex-wrap">
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
 <a class="navbar-brand pl-2" href="/">SearchRights</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -54,16 +54,32 @@ Search Systems
 </div>
 </li>
 </ul>
-<!-- <form class="form-inline my-1 ml-5 my-lg-0"> -->
-  <!-- search w/ FlexSearch -->
-  <!-- <input id="search-input" class="form-control p-0 m-0 mr-sm-1 pl-1" style="width: 200px; height: 30px;" type="search" placeholder="Search SearchRights..." aria-label="Search"> -->
-<!-- </form> -->
+
 </div>
 </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
+<form class="form-inline my-1 ml-2 my-lg-0">
+  <!-- search w/ FlexSearch -->
+  <input id="search-input" class="form-control p-0 m-0 mr-sm-1 pl-1" style="width: 200px; height: 30px;" type="search"
+    placeholder="Search..." aria-label="Search">
+</form>
+</nav>
 </div>
-<!-- <div id="search-results" class="text-left flexsearch-dropdown-menu"></div> -->
+<!-- display FlexSearch results -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 ml-auto">
+      <div id="search-results" class="text-left ml-5 border my-3 py-0 flexsearch-dropdown-menu p-3 hidden"></div>
+    </div>
+  </div>
+</div>
 
 <style>
+
+.hidden {
+  display: none;
+}
+
 #search-input {
 padding: 10px;
 width: 300px;
@@ -72,7 +88,7 @@ border: 1px solid #ddd;
 
 #search-results a {
 display: block;
-padding: 5px;
+/*padding: 5px;*/
 text-decoration: none;
 color: #333;
 }
@@ -81,11 +97,15 @@ color: #333;
 background-color: #f5f5f5;
 }
 
+#search-results a.hover {
+background-color: #f5f5f5;
+}
+
 </style>
 
 
-<!-- <script src="/js/vendor/flexsearch.bundle.js"></script> -->
-<!-- <script src="/js/search/flexsearch_implementation_SearchRights.js"></script> -->
+<script src="/js/vendor/flexsearch.bundle.js"></script>
+<script src="/js/search/flexsearch_implementation.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
